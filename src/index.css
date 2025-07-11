@@ -1,0 +1,249 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Video Player Styles */
+.video-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.video-title {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(45deg, #ffd700, #ffb347);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.video-description {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Custom Video.js Styles */
+.video-js {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-js:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Control bar styling */
+.video-js .vjs-control-bar {
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+  border-radius: 0 0 15px 15px;
+  height: 4rem;
+  font-size: 1.2em;
+}
+
+.video-js .vjs-big-play-button {
+  background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+  border: none;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  font-size: 2.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.video-js .vjs-big-play-button:hover {
+  background: linear-gradient(135deg, #ff5252, #d63031);
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.video-js .vjs-big-play-button .vjs-icon-placeholder:before {
+  color: white;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Progress bar styling */
+.video-js .vjs-progress-control .vjs-progress-holder {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+
+.video-js .vjs-progress-control .vjs-play-progress {
+  background: linear-gradient(90deg, #ffd700, #ffb347);
+  border-radius: 3px;
+}
+
+.video-js .vjs-progress-control .vjs-load-progress {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 3px;
+}
+
+/* Volume control */
+.video-js .vjs-volume-level {
+  background: linear-gradient(90deg, #00b894, #00cec9);
+}
+
+/* Button hover effects */
+.video-js .vjs-control-bar .vjs-button:hover {
+  color: #ffd700;
+  transform: scale(1.1);
+  transition: all 0.2s ease;
+}
+
+/* Chapters styling */
+.video-js .vjs-chapters-button .vjs-menu {
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.video-js .vjs-chapters-button .vjs-menu-item {
+  color: rgba(255, 255, 255, 0.9);
+  padding: 10px 15px;
+  transition: all 0.2s ease;
+}
+
+.video-js .vjs-chapters-button .vjs-menu-item:hover {
+  background: rgba(255, 215, 0, 0.2);
+  color: #ffd700;
+}
+
+/* Unmute button styling */
+.unmute-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 1000;
+  background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.unmute-button:hover {
+  background: linear-gradient(135deg, #ff5252, #d63031);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Note styling */
+.video-note {
+  margin-top: 20px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .video-container {
+    margin: 1rem;
+    padding: 15px;
+  }
+  
+  .video-title {
+    font-size: 2rem;
+  }
+  
+  .video-js .vjs-big-play-button {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+  }
+  
+  .video-js .vjs-control-bar {
+    height: 3rem;
+    font-size: 1rem;
+  }
+}
+
+/* Loading animation */
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+.video-js .vjs-loading-spinner {
+  border-color: #ffd700 transparent transparent transparent;
+  animation: pulse 1.5s infinite;
+}
+
+/* Fullscreen adjustments */
+.video-js.vjs-fullscreen {
+  background: #000;
+}
+
+.video-js.vjs-fullscreen .vjs-control-bar {
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.9) 100%);
+}
